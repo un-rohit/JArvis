@@ -1,4 +1,4 @@
-# ── MARK LVI — what never belongs in the repository ──────────────────────────
+# ── JArvis — what never belongs in the repository ─────────────────────────────
 # Everything listed here is created by the app on first run. A fresh clone with
 # none of it present boots straight to the setup screen, which is the intended
 # first experience — so nothing here needs to be committed, and some of it must
@@ -23,6 +23,8 @@ config/whatsapp_web/
 # ── Personal data the assistant accumulates about you ─────────────────────────
 memory/long_term.json
 memory/*.db
+memory/*.sqlite
+memory/*.sqlite3
 
 # ── Python build noise ────────────────────────────────────────────────────────
 __pycache__/
@@ -43,13 +45,27 @@ ENV/
 # ── Editors and operating systems ─────────────────────────────────────────────
 .vscode/
 .idea/
+.cursor/
+.gemini/
+.agents/
+*.code-workspace
 *.swp
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# ── Runtime output ────────────────────────────────────────────────────────────
+# ── Runtime output & downloaded models ────────────────────────────────────────
 *.log
 logs/
 downloads/
 screenshots/
+uploads/
+temp/
+*.tmp
+*.cache
+
+# ── Local TTS & voice models (e.g. Piper ONNX models) ─────────────────────────
+providers/voices/
+voices/
+*.onnx
+*.onnx.json
